@@ -1,0 +1,42 @@
+<div class ="contents row">
+  <div class="content_post" style="background-image: url(<%= @question.image %>);">
+    <% if user_signed_in? && current_user.id == @question.user_id %>
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+      <ul class="more_list">
+        <li>
+          <%= link_to '編集', "/questions/#{@question.id}/edit", method: :get %>
+        </li>
+        <li>
+          <%= link_to '削除', "/questions/#{@question.id}", method: :delete %>
+        </li>
+      </ul>
+    </div>
+    <% end %>
+    <%= simple_format(@question.text) %>
+    <span class="name">
+      <a href="/users/<%= @question.user.id %>">
+        <span>投稿者</span><%= @question.user.name %>
+      </a>
+    </span>
+  </div>
+  <div class="container">
+    <% if current_user %>
+      <%= form_tag("/questions/#{@question.id}/answers", method: :post) do %>
+        <textarea cols="30" name="text" placeholder="回答する" rows="2"></textarea>
+        <input type="submit" value="SENT">
+      <% end %>
+    <% end %>
+    <div class="answers">
+      <h4>＜回答一覧＞</h4>
+      <% if @answers %>
+        <% @answers.each do |answer| %>
+          <p>
+            <strong><%= link_to answer.user.name, "/users/#{answer.user_id}" %>：</strong>
+            <%= answer.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

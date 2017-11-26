@@ -1,0 +1,31 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.question_post {
+  border: solid 1px black;
+  margin-top: 20px;
+  position: relative;
+  a {
+    display: block;
+  }
+  .user_image {
+    display: inline-block;
+    border: solid 1px black;
+    width: 100px;
+    height: 80px;
+  }
+  .user_name {
+    display: inline-block;
+  }
+  .post_time {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .question {
+
+  }
+}
