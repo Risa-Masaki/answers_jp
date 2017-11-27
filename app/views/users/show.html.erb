@@ -1,13 +1,11 @@
+<div class="row form user_profile">
+      <div class="profile_edit">
+        <%= link_to 'プロフィール編集', edit_user_path(current_user) %>
+      </div>
+</div>
 <div class="contents row" >
-  <p><%= @name %>さんのプロフィール</p>
-  <% if user_signed_in? %>
-    <li>
-      <%= link_to '編集', "/users/#{current_user.id}/edit", method: :get %>
-    </li>
-  <% end %>
   <p><%= @name %>さんの投稿一覧</p>
   <% @questions.each do |question| %>
     <%= render partial: "questions/question", locals: { question: question } %>
   <% end %>
-  <%= paginate(@questions) %>
 </div>
