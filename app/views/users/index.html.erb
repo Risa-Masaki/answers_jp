@@ -1,0 +1,6 @@
+<div class="row form user_profile">
+  <% @users.each do |user| %>
+    <%= render partial: "user", locals: { user: user } %>
+    <% end %>
+  <%= paginate(@users) %>
+</div>

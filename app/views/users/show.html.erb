@@ -1,7 +1,21 @@
 <div class="row form user_profile">
-      <div class="profile_edit">
-        <%= link_to 'プロフィール編集', edit_user_path(current_user) %>
-      </div>
+  <div class="col-lg-12">
+    <p>名前</p>
+    <div class="user_name"><%= @name %></div>
+    <p>年齢</p>
+    <div class="user_age"><%= @age %></div>
+    <p>最寄り駅</p>
+    <div class="user_nearest_station"><%= @station %></div>
+    <p>求職状況</p>
+    <div class="user_apply_status"><%= @apply %></div>
+    <p>勤務可能スケジュール</p>
+    <div class="user_availability"><%= @availability %></div>
+  </div>
+</div>
+    <div class="profile_edit">
+      <%= link_to 'プロフィール編集', edit_user_path(current_user) %>
+    </div>
+  </div>
 </div>
 <div class="contents row" >
   <p><%= @name %>さんの投稿一覧</p>
