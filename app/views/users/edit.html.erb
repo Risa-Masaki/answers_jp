@@ -1,13 +1,13 @@
-<% provide :title, " | プロフィール編集" %>
+<% provide :title, " | Edit Profile" %>
 
 <div class="row form">
   <div class="col-lg-12">
     <%= form_for current_user do |f| %>
-      <h2>プロフィール画像</h2>
+      <h2>Image</h2>
       <div class="form-group file">
-        <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "画像アップロード" %>
+        <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "Upload Image" %>
       </div>
-      <h2>登録情報</h2>
+      <h2>Details</h2>
       <div class="form-group">
         <div class="col-lg-6">
           <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="form-group">
-        <%= f.submit "送信", class: "btn btn-primary withripple" %>
+        <%= f.submit "SUBMIT", class: "btn btn-primary withripple" %>
       </div>
     <% end %>
   </div>

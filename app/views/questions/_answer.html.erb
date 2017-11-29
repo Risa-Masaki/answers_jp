@@ -1,0 +1,10 @@
+<div class="answer_post">
+  <a href="/users/#{answer.user_id}">
+    <div class="user_image"><%= answer.user.avatar %></div>
+    <div class="user_name"><%= answer.user.name %></div>
+    <div class="post_time"><%= answer.updated_at %></div>
+    <div class="answer_content">
+      <%= simple_format(answer.text) %>
+    </div>
+  </a>
+</div>

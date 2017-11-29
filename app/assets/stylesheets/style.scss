@@ -15,7 +15,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-$accent: #57C3E9;
+$accent: #d8836e;
 $black: #292929;
 $dark: #666;
 $darkGray: #999999;
@@ -39,19 +39,19 @@ $white: white;
 
 body,html {
   height: 100%;
-  background-color: $lightGray;
+  background-color: $white;
 }
 
 body {
   padding-top: 60px;
-}
+  }
 
 h1,h2,h3,h4,h5,h6,body {
 line-height: 1.57;
   letter-spacing: 0.15em;
-  font-size: 16px;
+  font-size: 14px;
   color: $dark;
-  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
   margin: 0;
 }
 
@@ -87,7 +87,7 @@ a {
 }
 
 .btn {
-    @include basePadding(8px 20px);
+    @include basePadding(8px 10px);
     font-size: 14px;
     border: 2px solid $accent;
     color: $accent;
@@ -129,40 +129,44 @@ header.header {
   z-index: 5;
   div.header__bar.row {
     position: relative;
-    h1.grid-6 {
-      font-size: 20px;
-      line-height: 41px;
-      float: left;
+    h1.grid-4 {
+      font-size: 24px;
+      line-height: 40px;
       a {
-        display: block;
+        display: inline-block;
       }
     }
     div.grid-6 {
-      float: right;
-      text-align: right;
       a.post {
         @extend .btn;
         width: 120px;
-        display: inline-left;
-        margin-left: 10px;
+        display: inline-block;
+        left: 10px;
+        font-size: 14px;
+      }
+      a.apply {
+        @extend .btn;
+        width: 120px;
+        display: inline-block;
+        right: 10px;
+        font-size: 14px;
       }
     }
   }
   .user_nav {
-    position: relative;
-    height: 100px;
+    height: 40px;
     position: absolute;
     right: 0;
     span {
       top: 5px;
-      display: block;
-      float: left;
-      margin-left: 30px;
-      width: 150px;
-      height: 50px;
-      font-size: 1em;
+      display: inline-block;
+      margin-left: 0;
+      width: 100px;
+      height: 30px;
+      font-size: 18px;
       cursor: pointer;
-      position: relative;
+      position: absolute;
+      left: 0;
       &:after {
         content: '▼';
         font-size: .7em;
@@ -181,6 +185,7 @@ header.header {
       border-left: 1px solid #d8d8d8;
       border-right: 1px solid #d8d8d8;
       box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+      font-size: 14px;
       li {
         background-color: #f0f0f0;
         a {
@@ -221,7 +226,7 @@ div.contents.row {
     }
   }
   .new_user{
-  font-family: "游ゴシック", "YuGothic";
+  font-family: "メイリオ", "Meiryo";
   }
   div.content_post {
     @include boxBase(20px 0 ,30px);
@@ -335,11 +340,11 @@ form {
     color: $dark;
   }
   input,textarea {
-    width: 100%;
+    width: 80%;
     @include boxBase(5px 0 15px,10px);
     border: 1px solid $gray;
     border-radius: 5px;
-    font-family: "游ゴシック", "YuGothic";
+    font-family: "メイリオ", "Meiryo";
   }
   input[type="submit"] {
     @extend .transition;
@@ -354,14 +359,21 @@ form {
   }
 }
 .container {
-  @include boxBase(20px 0 ,30px);
+  @include boxBase(20px 0 ,80px);
   box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
 }
-.comments {
+.answers {
   padding: 5px;
   margin-top: 15px;
+  h4 {
+    @include baseMargin(0 0 20px);
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: $dark;
+  }
   a {
     color: $accent;
     &:hover {

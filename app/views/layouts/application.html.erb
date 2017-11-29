@@ -24,25 +24,25 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Answers.jp</a></h1>
+        <h1 class="grid-4"><a href="/">Answers.jp</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <span><%= current_user.name %>
             <ul class="user__info">
               <li>
-                <a href="/users/<%= current_user.id %>">マイページ</a>
-                <%= link_to "プロフィール編集", edit_user_path(current_user) %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                <a href="/users/<%= current_user.id %>">My Page</a>
+                <%= link_to "Edit Profile", edit_user_path(current_user) %>
+                <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
               </li>
             </ul>
           </span>
-          <a class="post" href="/questions/new">投稿する</a>
-          <a class="apply_list" href="/users/index">求職者一覧</a>
+          <a class="post" href="/questions/new">POST</a>
+          <a class="apply" href="/users">APPLY LIST</a>
         </div>
           <% else %>
         <div class="grid-6">
-          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+          <%= link_to "Sign In", new_user_session_path, class: 'post' %>
+          <%= link_to "Sign Up", new_user_registration_path, class: 'post' %>
         </div>
         <% end %>
       </div>

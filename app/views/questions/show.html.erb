@@ -3,7 +3,7 @@
       <div class="user_image"><%= @question.user.avatar %></div>
       <div class="user_name"><%= @question.user.name %></div>
       <div class="post_time"><%= @question.updated_at %></div>
-      <div class="question">
+      <div class="question_content">
         <%= simple_format(@question.text) %>
       </div>
   </div>
@@ -11,18 +11,16 @@
   <div class="container">
     <% if current_user %>
       <%= form_tag("/questions/#{@question.id}/answers", method: :post) do %>
-        <textarea cols="30" name="text" placeholder="回答する" rows="2"></textarea>
+        <textarea cols="30" name="text" placeholder="Answer Friend's Question" rows="2"></textarea>
         <input type="submit" value="SENT">
       <% end %>
     <% end %>
     <div class="answers">
-      <h4>＜回答一覧＞</h4>
+      <h4>＜ANSWERS＞</h4>
       <% if @answers %>
+      <div class="answer_post">
         <% @answers.each do |answer| %>
-          <p>
-            <strong><%= link_to answer.user.name, "/users/#{answer.user_id}" %>：</strong>
-            <%= answer.text %>
-          </p>
+          <%= render partial: "answer", locals: { answer: answer } %>
         <% end %>
       <% end %>
     </div>

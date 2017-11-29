@@ -2,15 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .question_post {
-  border: solid 1px black;
-  margin-top: 20px;
-  position: relative;
-  a {
+    position: relative;
+    margin-top: 20px;
+    margin: 2em 0 2em 40px;
+    padding: 8px 15px;
+    background: #f2d8bf;
+    border-radius: 30px;
+    a {
     display: block;
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
   }
-  .user_image {
+    .user_image {
     display: inline-block;
     border: solid 1px black;
     margin: 10px;
@@ -19,14 +22,75 @@
   }
   .user_name {
     display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 150px;
   }
   .post_time {
     display: inline-block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 10px;
   }
-  .question {
+  .question_content {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 150px;
+  }
+}
+.question_post:before{font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 15px;
+    left: -40px;
+    bottom: 0;
+    color: #fff0c6;
+}
+.question_post:after{
+    font-family: FontAwesome;
+    content: "\f111";
+    position: absolute;
+    font-size: 23px;
+    left: -23px;
+    bottom: 0;
+    color: #fff0c6;
+}
 
+.answer_post {
+    position: relative;
+    margin-top: 20px;
+    margin: 2em 0 2em 40px;
+    padding: 8px 15px;
+    background: #f2d8bf;
+    border-radius: 30px;
+    a {
+    display: block;
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  }
+    .user_image {
+    display: inline-block;
+    border: solid 1px black;
+    margin: 10px;
+    width: 100px;
+    height: 80px;
+  }
+  .user_name {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 150px;
+  }
+  .post_time {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+  .answer_content {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 150px;
   }
 }
