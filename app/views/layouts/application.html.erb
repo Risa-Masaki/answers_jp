@@ -24,10 +24,10 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-4"><a href="/">Answers.jp</a></h1>
+        <h1 div class="grid-4"><a href="/">Answers.jp</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <span><%= current_user.name %>
+            <div><%= current_user.name %>
             <ul class="user__info">
               <li>
                 <a href="/users/<%= current_user.id %>">My Page</a>
@@ -35,8 +35,8 @@
                 <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
               </li>
             </ul>
-          </span>
-          <a class="post" href="/questions/new">POST</a>
+          </div>
+          <a class="post" href="/questions/new">POST Q</a>
           <a class="apply" href="/users">APPLY LIST</a>
         </div>
           <% else %>

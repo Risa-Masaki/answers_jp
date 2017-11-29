@@ -1,16 +1,36 @@
 <div class="row form user_profile">
-  <div class="col-lg-12">
-    <p>Name</p>
-    <div class="user_name"><%= @name %></div>
-    <p>Age</p>
-    <div class="user_age"><%= @age %></div>
-    <p>Area</p>
-    <div class="user_nearest_station"><%= @station %></div>
-    <p>Apply Status</p>
-    <div class="user_apply_status"><%= @apply %></div>
-    <p>Availability</p>
-    <div class="user_availability"><%= @availability %></div>
-  </div>
+  <table class="user">
+    <tbody>
+      <tr>
+        <th class="arrow_box">Name</th>
+        <td><%= @name %></td>
+      </tr>
+      <tr>
+        <th class="arrow_box">Age</th>
+        <td><%= @age %></td>
+      </tr>
+      <tr>
+        <th class="arrow_box">Area</th>
+        <td><%= @station %></td>
+      </tr>
+      <tr>
+        <th class="arrow_box">Apply Status</th>
+        <td><%= @apply %></td>
+      </tr>
+      <tr>
+        <th class="arrow_box">Availability</th>
+        <td><%= @availability %></td>
+      </tr>
+      <tr>
+        <th class="arrow_box">Interest</th>
+        <td><%= @interest %></td>
+      </tr>
+      <tr>
+        <th class="arrow_box">Introduction</th>
+        <td><%= @introduction %></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
     <div class="profile_edit">
       <%= link_to 'Edit Profile', edit_user_path(current_user) %>
