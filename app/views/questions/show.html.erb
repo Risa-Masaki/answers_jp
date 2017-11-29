@@ -1,4 +1,7 @@
 <div class ="contents row">
+  <div style="text-align: right">
+    <a href="/questions/#{question.id}/edit">EDIT</a>
+  </div>
   <div class="question_post">
       <div class="user_image"><%= @question.user.avatar %></div>
       <div class="user_name"><%= @question.user.name %></div>
@@ -6,6 +9,9 @@
       <div class="question_content">
         <%= simple_format(@question.text) %>
       </div>
+  </div>
+  <div style="text-align: right">
+    <a href="/questions/#{question.id}">DELETE</a>
   </div>
 </div>
   <div class="container">

@@ -129,11 +129,15 @@ header.header {
   z-index: 5;
   div.header__bar.row {
     position: relative;
-    h1.grid-4{
-      position: relative;
-      padding-left: 40px;
+    h1.grid-6 {
+      font-size: 20px;
+      line-height: 41px;
+      float: left;
+      a {
+        display: block;
       }
-      h1:before{
+    }
+    h1:before{
       position: absolute;
       font-family: FontAwesome;
       content: "\f0eb";
@@ -152,8 +156,8 @@ header.header {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      }
-      h1:after {
+    }
+    h1:after {
       content: '';
       display: block;
       position: absolute;
@@ -168,52 +172,10 @@ header.header {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      }
-    .user_nav {
-    height: 40px;
-    position: absolute;
-    right: 0;
-    div {
-      top: 5px;
-      display: inline-block;
-      margin-left: 0;
-      width: 150px;
-      height: 30px;
-      font-size: 18px;
-      cursor: pointer;
-      position: absolute;
-      left: 0;
-      &:after {
-        content: '▼';
-        font-size: .7em;
-        margin-left: -4px;
-      }
-      &:hover ul {
-        color: $accent;
-        display: block;
-      }
     }
-    ul {
-      display: none;
-      position: absolute;
-      top: 46px;
-      left: 0;
-      border-left: 1px solid #d8d8d8;
-      border-right: 1px solid #d8d8d8;
-      box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
-      font-size: 14px;
-      li {
-        background-color: #f0f0f0;
-        a {
-          display: block;
-          padding: 8px 10px;
-          text-align: center;
-          border-bottom: 1px solid #d8d8d8;
-        }
-      }
-     }
-    }
-    div.grid-6 {
+    div.grid-8 {
+      float: right;
+      text-align: right;
       a.post {
         @extend .btn;
         width: 120px;
@@ -231,6 +193,51 @@ header.header {
         font-size: 14px;
       }
     }
+  }
+  .user_nav {
+    position: relative;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    span {
+      top: 5px;
+      display: block;
+      float: left;
+      margin-left: 30px;
+      padding-right: 10px;
+      width: 150px;
+      height: 50px;
+      font-size: 1em;
+      cursor: pointer;
+      position: relative;
+      &:after {
+        content: '▼';
+        font-size: .7em;
+        margin-left: -4px;
+      }
+      &:hover ul {
+        color: $accent;
+        display: block;
+      }
+    }
+    ul {
+      display: none;
+      position: absolute;
+      top: 46px;
+      right: 0;
+      border-left: 1px solid #d8d8d8;
+      border-right: 1px solid #d8d8d8;
+      box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+      li {
+        background-color: #f0f0f0;
+        a {
+          display: block;
+          padding: 10px 20px;
+          text-align: left;
+          border-bottom: 1px solid #d8d8d8;
+        }
+      }
+     }
   }
 }
 .form {
@@ -260,6 +267,30 @@ div.contents.row {
       font-size: 1.2em;
     }
   }
+  .new_user{
+  font-family: "メイリオ", "Meiryo";
+  }
+  div.content_post {
+    @include boxBase(20px 0 ,30px);
+    position: relative;
+    height: 400px;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba($black,0.2);
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include filter-gradient(#000000, #a60000, vertical);
+      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
+      z-index: 1;
+      border-radius: 3px;
+    }
     .more {
       position: absolute;
       cursor: pointer;
@@ -298,30 +329,6 @@ div.contents.row {
           }
         }
       }
-    }
-  .new_user{
-  font-family: "メイリオ", "Meiryo";
-  }
-  div.content_post {
-    @include boxBase(20px 0 ,30px);
-    position: relative;
-    height: 400px;
-    color: #fff;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 3px;
-    box-shadow: 0 0 10px rgba($black,0.2);
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      @include filter-gradient(#000000, #a60000, vertical);
-      @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
-      z-index: 1;
-      border-radius: 3px;
     }
     p {
       @extend .serif;
