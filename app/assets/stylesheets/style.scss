@@ -119,77 +119,76 @@ h1,h2,h3,h4,h5,h6 {
 
 
 header.header {
-  @include basePadding;
   border-bottom: 1px solid $gray;
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 5;
-  div.header__bar.row {
-    position: relative;
-    h1.grid-6 {
-      font-size: 20px;
-      line-height: 41px;
-      float: left;
-      a {
+  .header__bar {
+    .header__title {
+      position: relative;
+      h1 {
+        font-size: 20px;
+        line-height: 41px;
+        padding-left: 35px;
+        a {
+          display: inline-block;
+        }
+      }
+      h1:before{
+        position: absolute;
+        font-family: FontAwesome;
+        content: "\f0eb";
+        background: #ffca2c;
+        color: white;
+        font-weight: normal;
+        font-size: 15px;
+        border-radius: 50%;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      h1:after {
+        content: '';
         display: block;
+        position: absolute;
+        left: 20px;
+        height: 0;
+        width: 0;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 12px solid #ffca2c;
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
       }
     }
-    h1:before{
-      position: absolute;
-      font-family: FontAwesome;
-      content: "\f0eb";
-      background: #ffca2c;
-      color: white;
-      font-weight: normal;
-      font-size: 15px;
-      border-radius: 50%;
-      left: 0;
-      width: 25px;
-      height: 25px;
-      line-height: 25px;
-      text-align: center;
-      top: 50%;
-      -moz-transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-    h1:after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 20px;
-      height: 0;
-      width: 0;
-      border-top: 7px solid transparent;
-      border-bottom: 7px solid transparent;
-      border-left: 12px solid #ffca2c;
-      top: 50%;
-      -moz-transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-    div.grid-8 {
-      float: right;
+    .user_nav {
+      // float: right;
       text-align: right;
-      a.post {
+      .post {
         @extend .btn;
         width: 120px;
         display: inline-block;
-        position: absolute;
-        right: 130px;
+        // position: absolute;
+        // right: 130px;
         font-size: 14px;
       }
-      a.apply {
+      .apply {
         @extend .btn;
         width: 120px;
         display: inline-block;
-        position: absolute;
-        right: 0;
+        // position: absolute;
+        // right: 0;
         font-size: 14px;
       }
     }
@@ -259,7 +258,7 @@ header.header {
 }
 div.contents.row {
   h2 {
-    @include boxBase(20px 0, 0);
+    @include boxBase(10px 0, 0);
     font-weight: normal;
     strong {
       font-weight: bold;

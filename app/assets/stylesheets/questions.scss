@@ -7,7 +7,7 @@
     margin-top: 20px;
     margin: 1em 0 1em 40px;
     padding: 8px 15px;
-    background: #f2d8bf;
+    background: #fff0c6;
     border-radius: 30px;
     a {
     display: block;
@@ -39,8 +39,9 @@
     left: 150px;
   }
 }
-.question_post:before{font-family: FontAwesome;
+.question_post:before{
     content: "\f111";
+    font-family: FontAwesome;
     position: absolute;
     font-size: 15px;
     left: -40px;

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Answers.jp</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -22,11 +24,13 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__bar row">
-        <h1 div class="grid-4"><a href="/">Answers.jp</a></h1>
+    <header class="header row">
+      <div class="header__bar">
+        <div class="header__title">
+          <h1><a href="/">Answers.jp</a></h1>
+        </div>
         <% if user_signed_in? %>
-          <div class="user_nav grid-8">
+          <div class="user_nav">
             <span><%= current_user.name %>
               <ul class="user__info">
                 <li>
@@ -36,11 +40,11 @@
                 </li>
               </ul>
             </span>
-            <a class="post" href="/questions/new">POST Q</a>
-            <a class="apply" href="/users">APPLY LIST</a>
+            <!-- <a class="post" href="/questions/new">POST Q</a>
+            <a class="apply" href="/users">APPLY LIST</a> -->
           </div>
         <% else %>
-          <div class="grid-6">
+          <div class="login">
             <%= link_to "Sign In", new_user_session_path, class: 'post' %>
             <%= link_to "Sign Up", new_user_registration_path, class: 'post' %>
           </div>
