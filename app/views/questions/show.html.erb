@@ -3,7 +3,7 @@
     <a href="/questions/#{question.id}/edit">EDIT</a>
   </div>
   <div class="question_post">
-      <div class="user_image"><%= @question.user.avatar %></div>
+      <div class="user_image"><%= image_tag @question.user.avatar.url(:medium) %></div>
       <div class="user_name"><%= @question.user.name %></div>
       <div class="post_time"><%= @question.updated_at %></div>
       <div class="question_content">

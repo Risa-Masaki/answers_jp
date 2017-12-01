@@ -2,12 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.mypage_profile_image {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
 table.user {
     width: 500px;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0px 15px;
-    font-size: 12px;
+    font-size: 10px;
 }
 table.user th,
 table.user td {
@@ -23,7 +28,7 @@ table.user th {
     position: relative;
     color: #fff;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 10px;
 }
 table.user th:after {
     left: 100%;
