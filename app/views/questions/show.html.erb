@@ -12,7 +12,7 @@
       </div>
   </div>
   <div style="text-align: right">
-    <a href="/questions/<%= @question.id %>/delete">DELETE</a>
+    <%= link_to 'DELETE', "/questions/#{@question.id}", method: :delete %>
   </div>
 </div>
   <div class="container">

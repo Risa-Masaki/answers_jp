@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question = Question.find(params[:id])
     if @question.user_id == current_user.id
-      @question.destroy(question_params)
+      @question.destroy
     end
   end
 
@@ -40,7 +40,7 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
-    params.permit(:text, :image)
+    params.require(:question).permit(:text, :image)
   end
 
   def move_to_index
