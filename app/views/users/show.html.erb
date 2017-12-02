@@ -1,4 +1,4 @@
-<div class="row form user_profile">
+<div class="profile_list">
   <div class="mypage_profile_image">
   <%= image_tag @user.avatar.url(:medium) %>
   </div>
@@ -53,7 +53,7 @@
     <% end %>
   <% end %>
   <div class="recommends">
-    <h4>Introduction by Friends</h4>
+    <p class="content_title">●INTRODUCTION BY FRIENDS●</p>
     <% if @recommends %>
       <% @recommends.each do |recommend| %>
         <%= render partial: "recommend", locals: { recommend: recommend } %>
@@ -63,7 +63,8 @@
 </div>
 
 <div class="contents row" >
-  <p><%= @name %>'s Questions</p>
+  <p class="page_title">
+      <%= @user.name %>'s Question</p>
   <% @questions.each do |question| %>
     <%= render partial: "questions/question", locals: { question: question } %>
   <% end %>

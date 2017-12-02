@@ -1,35 +1,13 @@
-<div class="question_post">
+<div class="question_post clearfix">
   <a href="/questions/<%= question.id %>">
-    <div class="user_image"><%= image_tag question.user.avatar.url(:medium) %></div>
-    <div class="user_name"><%= question.user.name %></div>
-    <div class="post_time"><%= question.updated_at %></div>
+    <div class="user_image"><%= image_tag question.user.avatar.url(:medium) %>
+    </div>
     <div class="question_content">
-      <%= simple_format(question.text) %>
+      <p class="question_caption">
+        <%= question.user.name %>
+        <%= question.updated_at %>
+      </p>
+      <%= simple_format(question.text, class: 'question_text') %>
     </div>
   </a>
 </div>
-<!--
-<div class="question_post" style="background-image: url(<%= question.image %>);">
-  <div class="more">
-    <span><%= image_tag 'arrow_top.png' %></span>
-    <ul class="more_list">
-      <li>
-        <%= link_to '詳細', "/questions/#{question.id}", method: :get %>
-      </li>
-      <% if user_signed_in? && current_user.id == question.user_id %>
-        <li>
-          <%= link_to '編集', "/questions/#{question.id}/edit", method: :get %>
-        </li>
-        <li>
-          <%= link_to '削除', "/questions/#{question.id}", method: :delete %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-  <%= simple_format(question.text) %>
-  <span class="name">
-    <a href="/users/<%= question.user_id %>">
-      <span>投稿者</span><%= question.user.name %>
-    </a>
-  </span>
-</div> -->

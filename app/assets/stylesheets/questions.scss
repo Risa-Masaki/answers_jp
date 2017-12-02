@@ -2,79 +2,81 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.page_title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .question_post {
-    position: relative;
-    margin-top: 20px;
-    margin: 1em auto;
-    padding: 8px 15px;
-    background: #fff0c6;
+    background: #f2d8bf;
     border-radius: 30px;
+    color: #f5f5f3;
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 100%;
     a {
-    display: block;
     font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif;
   }
     .user_image {
-    display: inline-block;
-    vertical-align: middle;
-    border: solid 1px black;
-    margin: 10px;
-    width: 60px;
-    height: 60px;
+    float: left;
+    margin: 10px 0;
+    img{
+      border: solid 1px black;
+      width: 30px;
+      height: 30px;
+    }
   }
-  .user_name {
-    display: inline-block;
-    position: absolute;
-    font-size: 6px;
-  }
-  .post_time {
-    display: inline-block;
-    position: absolute;
-    right: 20px;
-    font-size: 4px;
-  }
-  .question_content {
-    display: inline-block;
-    position: absolute;
-    top: 30px;
-    vertical-align: middle;
-    font-size: 10px;
+  .question_content{
+    float: left;
+    margin-left: 10px;
+    width: calc(100% - 40px);
+    .question_caption {
+      font-size: 4px;
+      display: inline;
+      width: calc(100% - 40px);
+    }
+    .question_text {
+      font-size: 4px;
+      word-wrap: break-word;
+      width: calc(100% - 30px);
+    }
   }
 }
 
 .answer_post {
-    position: relative;
-    margin-top: 20px;
-    margin: 1em auto;
-    padding: 8px 15px;
     background: #f2d8bf;
     border-radius: 30px;
+    color: #f5f5f3;
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 100%;
     a {
-    display: block;
     font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif;
   }
     .user_image {
-    display: inline-block;
-    border: solid 1px black;
-    margin: 5px;
-    width: 40px;
-    height: 40px;
+    float: left;
+    margin: 15px 0;
+    img{
+      border: solid 1px black;
+      width: 25px;
+      height: 25px;
+    }
   }
-  .user_name {
-    display: inline-block;
-    position: absolute;
-    font-size: 6px;
-  }
-  .post_time {
-    display: inline-block;
-    position: absolute;
-    right: 10px;
-    font-size: 4px;
-  }
-  .answer_content {
-    display: inline-block;
-    position: absolute;
-    top: 15px;
-    vertical-align: middle;
-    font-size: 8px;
+  .answer_content{
+    float: left;
+    margin-left: 5px;
+    width: calc(100% - 30px);
+    .answer_caption {
+      font-size: 4px;
+      display: inline;
+      width: calc(100% - 30px);
+    }
+    .answer_text {
+      font-size: 4px;
+      word-wrap: break-word;
+      width: calc(100% - 30px);
+    }
   }
 }

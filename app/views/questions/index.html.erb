@@ -1,8 +1,9 @@
+<p class="page_title">●QUESTIONS & ANSWERS●</p>
 <div class="contents row">
   <% @questions.each do |question| %>
     <%= render partial: "question", locals: { question: question } %>
     <% end %>
-  <%= paginate(@questions) %>
+    <%= paginate(@questions) %>
   <div class="upper">
     <div class="btn_post">
       <%= link_to "POST", new_question_path %>

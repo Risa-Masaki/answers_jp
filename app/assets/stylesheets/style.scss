@@ -142,7 +142,7 @@ header.header {
         position: absolute;
         font-family: FontAwesome;
         content: "\f0eb";
-        background: #ffca2c;
+        background: #c3003a;
         color: white;
         font-weight: normal;
         font-size: 15px;
@@ -167,7 +167,7 @@ header.header {
         width: 0;
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent;
-        border-left: 12px solid #ffca2c;
+        border-left: 12px solid #c3003a;
         top: 50%;
         -moz-transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -279,6 +279,9 @@ header.header {
   }
 }
 div.contents.row {
+  position: relative;
+  margin: 10px 0;
+  padding: 30px 0;
   h2 {
     @include boxBase(10px 0, 0);
     font-weight: normal;
@@ -294,7 +297,6 @@ div.contents.row {
   div.content_post {
     @include boxBase(20px 0 ,30px);
     position: relative;
-    height: 400px;
     color: #fff;
     background-size: cover;
     background-position: center center;
@@ -447,10 +449,7 @@ form {
 
 footer {
   color: $gray;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  bottom: 5px;
   p {
     font-size: 5px;
     text-align: center;

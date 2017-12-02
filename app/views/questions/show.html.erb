@@ -2,15 +2,21 @@
   <div style="text-align: right">
     <a href="/questions/<%= @question.id %>/edit">EDIT</a>
   </div>
-
-  <div class="question_post">
-      <div class="user_image"><%= image_tag @question.user.avatar.url(:medium) %></div>
-      <div class="user_name"><%= @question.user.name %></div>
-      <div class="post_time"><%= @question.updated_at %></div>
-      <div class="question_content">
-        <%= @question.text %>
+  <p class="page_title">
+      <%= @question.user.name %>'s Question</p>
+  <div class="question_post clearfix">
+    <a href="/questions/<%= @question.id %>">
+      <div class="user_image"><%= image_tag @question.user.avatar.url(:medium) %>
       </div>
-  </div>
+      <div class="question_content">
+        <p class="question_caption">
+          <%= @question.user.name %>
+          <%= @question.updated_at %>
+        </p>
+        <%= simple_format(@question.text, class: 'question_text') %>
+      </div>
+    </a>
+</div>
   <div style="text-align: right">
     <%= link_to 'DELETE', "/questions/#{@question.id}", method: :delete %>
   </div>
@@ -29,7 +35,7 @@
       <% end %>
     <% end %>
     <div class="answers">
-      <h4>＜ANSWERS＞</h4>
+      <h4>●ANSWERS●</h4>
       <% if @answers %>
         <% @answers.each do |answer| %>
           <%= render partial: "answer", locals: { answer: answer } %>

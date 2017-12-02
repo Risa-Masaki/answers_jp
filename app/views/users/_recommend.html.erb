@@ -1,1 +1,20 @@
-<p><%= recommend.text %></p>
+<!-- <div class="recommend_post">
+  <a href="/users/#{recommend.user_id}">
+    <div class="post_time"><%= recommend.updated_at %></div>
+    <div class="recommend_content">
+      <%= simple_format(recommend.text) %>
+    </div>
+  </a>
+</div> -->
+
+<div class="recommend_post clearfix">
+  <a href="/users/<%= recommend.user_id %>">
+    <div class="recommend_content">
+      <p class="recommend_caption">
+        <%= recommend.user.name %>
+        <%= recommend.updated_at %>
+      </p>
+      <%= simple_format(recommend.text, class: 'recommend_text') %>
+    </div>
+  </a>
+</div>
