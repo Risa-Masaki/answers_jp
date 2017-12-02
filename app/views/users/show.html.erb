@@ -1,6 +1,6 @@
 <div class="row form user_profile">
   <div class="mypage_profile_image">
-  <%= image_tag @avatar.url(:medium) %>
+  <%= image_tag @user.avatar.url(:medium) %>
   </div>
   <div class="profile_edit">
     <%= link_to 'Edit Profile', edit_user_path(current_user) %>
@@ -9,35 +9,59 @@
     <tbody>
       <tr>
         <th class="arrow_box">Name</th>
-        <td><%= @name %></td>
+        <td><%= @user.name %></td>
       </tr>
       <tr>
         <th class="arrow_box">Age</th>
-        <td><%= @age %></td>
+        <td><%= @user.age %></td>
       </tr>
       <tr>
         <th class="arrow_box">Area</th>
-        <td><%= @station %></td>
+        <td><%= @user.station %></td>
       </tr>
       <tr>
         <th class="arrow_box">Apply Status</th>
-        <td><%= @apply %></td>
+        <td><%= @user.apply %></td>
       </tr>
       <tr>
         <th class="arrow_box">Availability</th>
-        <td><%= @availability %></td>
+        <td><%= @user.availability %></td>
       </tr>
       <tr>
         <th class="arrow_box">Interest</th>
-        <td><%= @interest %></td>
+        <td><%= @user.interest %></td>
       </tr>
       <tr>
         <th class="arrow_box">Introduction</th>
-        <td><%= @introduction %></td>
+        <td><%= @user.introduction %></td>
       </tr>
     </tbody>
   </table>
 </div>
+
+<div class="container">
+  <% if current_user %>
+    <%= form_for [@user, @recommend] do |f| %>
+      <div class="form-group">
+        <div class="col-lg-6">
+          <%= f.text_field :text, placeholder: "Introduce Your Friend!", class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.submit "SEND", class: "btn btn-primary withripple" %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="recommends">
+    <h4>Introduction by Friends</h4>
+    <% if @recommends %>
+      <% @recommends.each do |recommend| %>
+        <%= render partial: "recommend", locals: { recommend: recommend } %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
 <div class="contents row" >
   <p><%= @name %>'s Questions</p>
   <% @questions.each do |question| %>

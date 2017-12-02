@@ -1,9 +1,11 @@
 <div class="row form user_profile">
-  <div class="col-lg-12">
-    <div class="user_list_image">
-  <%= image_tag user.avatar.url(:medium) %>
-  </div>
-    <div class="user_list_name"><%= user.name %></div>
-    <div class="user_list_area"><%= user.station %></div>
-  </div>
+  <a href="/users/<%= user.id %>">
+    <div class="col-lg-12">
+      <div class="user_list_image">
+    <%= image_tag user.avatar.url(:medium) %>
+    </div>
+      <div class="user_list_name"><%= user.name %></div>
+      <div class="user_list_area"><%= user.station %></div>
+    </div>
+  </a>
 </div>

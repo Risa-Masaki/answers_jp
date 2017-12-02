@@ -3,4 +3,12 @@
     <%= render partial: "question", locals: { question: question } %>
     <% end %>
   <%= paginate(@questions) %>
+  <div class="upper">
+    <div class="btn_post">
+      <%= link_to "POST", new_question_path %>
+    </div>
+    <div class="btn_apply">
+      <%= link_to "APPLY LIST", users_path %>
+    </div>
+  </div>
 </div>

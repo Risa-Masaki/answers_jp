@@ -43,7 +43,7 @@ body,html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
   }
 
 h1,h2,h3,h4,h5,h6,body {
@@ -119,6 +119,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 header.header {
+  height: 50px;
   border-bottom: 1px solid $gray;
   background-color: #fff;
   position: absolute;
@@ -269,19 +270,11 @@ header.header {
     }
 }
 .form {
-  background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
-  background-size: cover;
   .contents {
     position: absolute;
     left: 0;
     top: 30%;
     bottom: 0;
-    right: 0;
-  }
-  footer {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
     right: 0;
   }
 }
@@ -453,9 +446,55 @@ form {
 }
 
 footer {
-  @include boxBase;
   color: $gray;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   p {
+    font-size: 5px;
     text-align: center;
+  }
+}
+
+.upper {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  padding: 0 10px;
+  .btn_post {
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    border:solid 3px $accent;
+    line-height: 74px;
+    font-size: 12px;
+    text-align: center;
+    float: right;
+    margin-bottom: 5px;
+    a {
+      display: inline-block;
+      color: $accent;
+    }
+  }
+  .btn_apply {
+    width: 260px;
+    height: 40px;
+    font-size: 12px;
+    border:solid 3px $accent;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 20px;
+    a {
+      display: inline-block;
+      color: $accent;
+    }
   }
 }

@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :questions do
     resources :answers, only: [:create]
   end
-  resources :users, only: [:show, :edit, :update, :index]
+  resources :users, only: [:show, :edit, :update, :index] do
+    resources :recommends, only: [:create]
+  end
 end

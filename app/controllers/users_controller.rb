@@ -1,15 +1,9 @@
 class UsersController < ApplicationController
   def show
-    user = User.find(params[:id])
-    @avatar = user.avatar
-    @name = user.name
-    @age = user.age
-    @station = user.station
-    @apply = user.apply
-    @availability = user.availability
-    @interest = user.interest
-    @introduction = user.introduction
-    @questions = user.questions.page(params[:page]).per(5).order("created_at DESC")
+    @user = User.find(params[:id])
+    @recommend = Recommend.new
+    @recommends = @user.recommends.includes(:user)
+    @questions = @user.questions.page(params[:page]).per(5).order("created_at DESC")
   end
 
   def edit
@@ -21,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.page(params[:page]).per(10)
+    @users = User.where("apply = 'YES'").order("updated_at DESC").page(params[:page]).per(5)
   end
 
   private
