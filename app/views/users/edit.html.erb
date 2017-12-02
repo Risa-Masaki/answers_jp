@@ -1,6 +1,6 @@
 <% provide :title, " | Edit Profile" %>
 
-<div class="row form">
+<div class="row form useredit">
   <div class="col-lg-12">
     <%= form_for current_user do |f| %>
       <h2>Image</h2>
@@ -12,27 +12,35 @@
         <div class="col-lg-6">
           <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
         </div>
+        <p>eg. Justin Bieber</p>
         <div class="col-lg-6">
           <%= f.text_field :email, placeholder: "Email Address", class: "form-control" %>
         </div>
+        <p>eg. abcdefgh@gmaol.com</p>
         <div class="col-lg-6">
           <%= f.text_field :age, placeholder: "Age", class: "form-control" %>
         </div>
+        <p>eg. 25</p>
         <div class="col-lg-6">
           <%= f.text_field :station, placeholder: "Nearest station", class: "form-control" %>
         </div>
+        <p>eg. Kanda</p>
         <div class="col-lg-6">
           <%= f.text_field :apply, placeholder: "Apply status *Please enter YES/NO", class: "form-control" %>
         </div>
+        <p>eg. YES</p>
         <div class="col-lg-6">
           <%= f.text_field :availability, placeholder: "Availability", class: "form-control" %>
         </div>
+        <p>eg. 9am-4pm on weekdays, January to March 2018 </p>
         <div class="col-lg-6">
           <%= f.text_field :interest, placeholder: "Interest", class: "form-control" %>
         </div>
+        <p>eg. Cooking, Travelling, Speaking Japanese</p>
         <div class="col-lg-6">
           <%= f.text_field :introduction, placeholder: "Introduction", class: "form-control" %>
         </div>
+        <p>eg. I have been to more than 20 countries!</p>
       </div>
       <div class="form-group">
         <%= f.submit "SUBMIT", class: "btn btn-primary withripple" %>
