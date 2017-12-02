@@ -15,8 +15,10 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    question = Question.find(params[:id])
-    question.destroy if question.user_id == current_user.id
+    @question = Question.find(params[:id])
+    if @question.user_id == current_user.id
+      @question.destroy(question_params)
+    end
   end
 
   def edit

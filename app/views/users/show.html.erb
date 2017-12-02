@@ -2,6 +2,9 @@
   <div class="mypage_profile_image">
   <%= image_tag @avatar.url(:medium) %>
   </div>
+  <div class="profile_edit">
+    <%= link_to 'Edit Profile', edit_user_path(current_user) %>
+  </div>
   <table class="user">
     <tbody>
       <tr>
@@ -34,11 +37,6 @@
       </tr>
     </tbody>
   </table>
-</div>
-    <div class="profile_edit">
-      <%= link_to 'Edit Profile', edit_user_path(current_user) %>
-    </div>
-  </div>
 </div>
 <div class="contents row" >
   <p><%= @name %>'s Questions</p>

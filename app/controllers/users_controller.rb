@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     @station = user.station
     @apply = user.apply
     @availability = user.availability
+    @interest = user.interest
+    @introduction = user.introduction
     @questions = user.questions.page(params[:page]).per(5).order("created_at DESC")
   end
 

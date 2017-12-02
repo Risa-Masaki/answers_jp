@@ -7,6 +7,11 @@
     margin: 0 auto;
 }
 
+.profile_edit {
+    margin: 0 auto;
+    text-align: center;
+}
+
 table.user {
     width: 500px;
     margin: 0 auto;
@@ -65,4 +70,18 @@ table.user td {
     background: #f8f8f8;
     width: 360px;
     padding-left: 20px;
+}
+
+.user_list_image {
+    max-width: 30%;
+    margin: 0 auto;
+}
+.user_list_name {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.user_list_area {
+    text-align: center;
+    font-size: 10px;
 }

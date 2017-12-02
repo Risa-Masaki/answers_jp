@@ -88,7 +88,7 @@ a {
 
 .btn {
     @include basePadding(2px 2px);
-    font-size: 10px;
+    font-size: 8px;
     border: 2px solid $accent;
     color: $accent;
     font-weight: bold;
@@ -193,7 +193,7 @@ header.header {
         width: 60px;
         display: inline-block;
         position: absolute;
-        right: 80px;
+        right: 85px;
         font-size: 8px;
       }
     }
@@ -201,23 +201,21 @@ header.header {
   .user_nav {
     position: absolute;
     float: left;
-    width: 100px;
+    width: 110px;
     height: 50px;
     right: 0;
     span {
       top: 5px;
       display: block;
       float: left;
-      margin-left: 10px;
-      padding-right: 10px;
-      width: 100px;
+      width: 110px;
       height: 50px;
-      font-size: 8px;
+      font-size: 12px;
       cursor: pointer;
       position: relative;
       &:after {
         content: '▼';
-        font-size: .2em;
+        font-size: .4em;
         margin-left: -2px;
       }
       &:hover ul {
@@ -244,6 +242,31 @@ header.header {
       }
      }
   }
+
+    .login {
+      position: absolute;
+      float: left;
+      width: 100%;
+      height: 25px;
+      text-align: right;
+      margin-top: 5px;
+      .signin {
+        @extend .btn;
+        width: 60px;
+        display: inline-block;
+        position: absolute;
+        right: 150px;
+        font-size: 8px;
+      }
+      .signup {
+        @extend .btn;
+        width: 60px;
+        display: inline-block;
+        position: absolute;
+        right: 85px;
+        font-size: 8px;
+      }
+    }
 }
 .form {
   background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
@@ -387,7 +410,7 @@ form {
     color: $dark;
   }
   input,textarea {
-    width: 80%;
+    width: 100%;
     @include boxBase(5px 0 15px,10px);
     border: 1px solid $gray;
     border-radius: 5px;
@@ -406,7 +429,7 @@ form {
   }
 }
 .container {
-  @include boxBase(20px 0 ,80px);
+  @include boxBase(20px 0 ,40px);
   box-shadow: 0 0 10px rgba($black,0.2);
   background-color: $white;
   box-sizing: border-box;
