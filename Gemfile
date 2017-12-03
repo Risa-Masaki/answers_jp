@@ -52,3 +52,5 @@ gem 'kaminari'
 gem 'devise'
 gem 'paperclip'
 gem 'font-awesome-sass'
+gem "omniauth"
+gem "omniauth-facebook"
