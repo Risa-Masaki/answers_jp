@@ -54,3 +54,7 @@ gem 'paperclip'
 gem 'font-awesome-sass'
 gem "omniauth"
 gem "omniauth-facebook"
+
+group :production do
+  gem 'rails_12factor'
+end
