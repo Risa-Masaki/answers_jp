@@ -26,7 +26,7 @@
         </div>
         <p>eg. Kanda</p>
         <div class="col-lg-6">
-          <%= f.text_field :apply, placeholder: "Apply status *Please enter YES/NO", class: "form-control" %>
+          <%= f.select :apply, {"YES": "YES", "NO": "NO"}, {}, {class: "form-control"} %>
         </div>
         <p>eg. YES</p>
         <div class="col-lg-6">

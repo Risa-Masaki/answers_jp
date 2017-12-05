@@ -7,11 +7,15 @@ class UsersController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
     current_user.update(update_params)
+    if params.require(:user)[:apply] == "YES" then
+      redirect_to root_path
+    else
+      redirect_to new_restaurant_path
+    end
   end
 
   def index

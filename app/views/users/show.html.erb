@@ -20,10 +20,6 @@
         <td><%= @user.station %></td>
       </tr>
       <tr>
-        <th class="arrow_box">Apply Status</th>
-        <td><%= @user.apply %></td>
-      </tr>
-      <tr>
         <th class="arrow_box">Availability</th>
         <td><%= @user.availability %></td>
       </tr>
@@ -35,10 +31,23 @@
         <th class="arrow_box">Introduction</th>
         <td><%= @user.introduction %></td>
       </tr>
+      <tr>
+        <th class="arrow_box">Apply Status</th>
+        <td><%= @user.apply %></td>
+      </tr>
+      <% if @user.restaurants && @user.apply=="NO" %>
+        <tr>
+          <th class="arrow_box">Working Restaurant</th>
+          <td><a href="<%= @user.restaurants[0].url %>"><%= @user.restaurants[0].name %></a></td>
+        </tr>
+        <tr>
+          <th class="arrow_box">Working Address</th>
+          <td><%= @user.restaurants[0].address %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
-
 <div class="container">
   <% if current_user %>
     <%= form_for [@user, @recommend] do |f| %>

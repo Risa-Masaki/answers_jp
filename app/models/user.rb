@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :questions
   has_many :answers
   has_many :recommends
+  has_many :user_restaurants
+  has_many :restaurants, through: :user_restaurants
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}
   validates_attachment_content_type :avatar, content_type: ["image/jpg","image/jpeg","image/png"]
@@ -24,7 +26,6 @@ class User < ActiveRecord::Base
 
         # If you are using confirmable and the provider(s) you use validate emails,
         # uncomment the line below to skip the confirmation emails.
-
       end
     end
   end

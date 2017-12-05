@@ -10,4 +10,11 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update, :index] do
     resources :recommends, only: [:create]
   end
+
+  resources :restaurants do
+    collection do
+      get 'search'
+      get 'register'
+    end
+  end
 end
