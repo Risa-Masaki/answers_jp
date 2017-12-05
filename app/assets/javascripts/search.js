@@ -3,14 +3,14 @@ $(function(){
   var search_list = $(".result");
 
   function appendRestaurant(restaurant) {
-   var html = `<div class="result_store">
-                <img src="${ restaurant.image }">
-                <ul>
-                  <li class="result_storeName">${ restaurant.name }</li>
-                  <li class="result_storeAddress">${ restaurant.address }</li>
-                </ul>
-                <a href="/restaurants/register?id=${ restaurant.id }">登録</a>
-              </div>`
+   // var html = `<div class="result_store">
+   //              <img src="${ restaurant.image }">
+   //              <ul>
+   //                <li class="result_storeName">${ restaurant.name }</li>
+   //                <li class="result_storeAddress">${ restaurant.address }</li>
+   //              </ul>
+   //              <a href="/restaurants/register?id=${ restaurant.id }">登録</a>
+   //            </div>`
     search_list.append(html);
   }
 
