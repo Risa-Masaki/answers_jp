@@ -25,15 +25,25 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-   config.assets.js_compressor = :uglifier
+   # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
+  # Do not fallback to assets pipeline if a precompiled asset is missed.
+
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
-  # yet still be able to expire them through the digest params.
+  # yet still be able to expire them through the digests params.
   config.assets.digest = true
+
+####################################
+
+##  public 配下の画像を読み込むように
+## https://devcenter.heroku.com/articles/rails-4-asset-pipeline
+
+###################################
+  config.serve_static_assets = true
+
+
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
