@@ -104,10 +104,16 @@ table.user td {
     margin-bottom: 0;
 }
 
-p {
+p.explanation {
     font-size: 4px;
+    color: black;
+    margin: 0 auto;
+}
+
+p.example {
+    font-size: 2px;
     color: #d8836e;
-    margin: 5px;
+    margin: 0 auto;
 }
 
 .useredit input {
