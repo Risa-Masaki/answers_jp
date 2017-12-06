@@ -9,7 +9,7 @@ $(function(){
                   <li class="result_storeName">${ restaurant.name }</li>
                   <li class="result_storeAddress">${ restaurant.address }</li>
                 </ul>
-                <a href="/restaurants/register?id=${ restaurant.id }">登録</a>
+                <a href="/restaurants/register?id=${ restaurant.id }">Register as work place</a>
               </div>`
     search_list.append(html);
   }
@@ -19,7 +19,7 @@ $(function(){
     search_list.append(html);
   }
 
-  $(".search__query, .search__name, .search__area").on("change", function(){
+  $(".search__name, .search__area").on("change", function(){
     var name = $(".search__name").val();
     var area = $(".search__area").val();
 
@@ -41,11 +41,11 @@ $(function(){
         });
       }
       else {
-        appendNorestaurant("一致する店舗はありません");
+        appendNorestaurant("No search result");
       }
     })
     .fail(function() {
-      alert('店舗検索に失敗しました');
+      alert('Failed to search');
     })
   });
 });

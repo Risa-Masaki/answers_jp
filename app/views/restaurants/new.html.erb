@@ -1,43 +1,48 @@
 <form>
-  <input class="search__name form-control" name="name" placeholder="店名" type="text" value="">
+  <div class="input_item">WORKPLACE NAME - Enter your work place name</div>
+  <input class="search__name form-control" name="name" placeholder="Store Name" type="text" value="">
+  <div class="notice">*You can search for your workplace only if you are working at restaurants.</div>
+
+  <div class="input_item">WORKPLACE AREA - Select your work place area</div>
   <select class="search__area form-control" name="area">
-    <option value="Y005">銀座・有楽町・新橋・築地・月島</option>
-    <option value="Y006">水道橋・飯田橋・神楽坂</option>
-    <option value="Y007">お台場</option>
-    <option value="Y010">東京・大手町・日本橋・人形町</option>
-    <option value="Y013">四ツ谷・麹町・市ヶ谷・九段下</option>
-    <option value="Y015">上野・御徒町・浅草</option>
-    <option value="Y016">北千住・日暮里・葛飾・荒川</option>
-    <option value="Y017">錦糸町・浅草橋・両国・亀戸</option>
-    <option value="Y018">門前仲町・東陽町・木場・葛西</option>
-    <option value="Y020">神田・神保町・秋葉原・御茶ノ水</option>
-    <option value="Y025">品川･目黒･田町･浜松町･五反田</option>
-    <option value="Y026">蒲田・大森・大田区</option>
-    <option value="Y030">渋谷</option>
-    <option value="Y035">原宿・青山・表参道</option>
-    <option value="Y040">恵比寿・中目黒・代官山・広尾</option>
-    <option value="Y045">赤坂・六本木・麻布十番・西麻布</option>
-    <option value="Y046">自由が丘・田園調布</option>
-    <option value="Y050">池袋</option>
-    <option value="Y051">赤羽・王子・十条</option>
-    <option value="Y055">新宿</option>
-    <option value="Y056">新大久保・大久保</option>
-    <option value="Y057">新大久保・大久保</option>
-    <option value="Y060">中野・高円寺・阿佐ヶ谷・方南町</option>
-    <option value="Y070">下北沢・代々木上原</option>
-    <option value="Y072">高田馬場</option>
-    <option value="Y073">池尻大橋・三軒茶屋・駒沢大学</option>
-    <option value="Y074">桜新町・用賀・二子玉川</option>
-    <option value="Y075">祐天寺・学芸大学・都立大学</option>
-    <option value="Y076">幡ヶ谷・笹塚・明大前・下高井戸</option>
-    <option value="Y077">調布・府中・千歳烏山・仙川</option>
-    <option value="Y078">経堂・千歳船橋</option>
-    <option value="Y079">祖師ヶ谷大蔵・成城学園前</option>
-    <option value="Y080">大井町･中延･旗の台･戸越･馬込</option>
-    <option value="Y081">不動前・武蔵小山</option>
-    <option value="Y082">雪が谷大塚・池上</option>
-    <option value="Y083">武蔵小金井</option>
+    <option value="Y005">Ginza, Yurakucho, Shinbashi, Tsukiji, Tsukishima</option>
+    <option value="Y006">Suidobashi, Iidabashi, Kagurazaka</option>
+    <option value="Y007">Odaiba</option>
+    <option value="Y010">Tokyo, Ohtemachi, Nihonbashi, Ningyocho</option>
+    <option value="Y013">Yotsuya, Kojimachi, Ichigaya, Kudanshita</option>
+    <option value="Y015">Ueno, Okachimachi, Asakusa</option>
+    <option value="Y016">Kitasenju, Nippori, Katsushika, Arakawa</option>
+    <option value="Y017">Kinshicho, Asakusabashi, Ryogoku, Kamedo</option>
+    <option value="Y018">Monzen-Nakacho, Toyocho, Kiba, Kasai</option>
+    <option value="Y020">Kanda, Jinbocho, Akihabara, Ochanomizu</option>
+    <option value="Y025">Shinagawa, Meguro, Tamachi, Hamamatsucho, Gotanda</option>
+    <option value="Y026">Kamata, Ohmori, Ohta-ku</option>
+    <option value="Y030">Shibuya</option>
+    <option value="Y035">Harajuku, Aoyama, Omotesando</option>
+    <option value="Y040">Ebisu, Nakameguro, Daikanyama, Hiroo</option>
+    <option value="Y045">Akasaka, Roppongi, Azabu-juban, Nishiazabu</option>
+    <option value="Y046">Jiyugaoka, Denen-chofu</option>
+    <option value="Y050">Ikebukuro</option>
+    <option value="Y051">Akabane, Ouji, Jujo</option>
+    <option value="Y055">Shinjuku</option>
+    <option value="Y056">Shin-okubo, Okubo</option>
+    <option value="Y057">Shin-okubo, Okubo</option>
+    <option value="Y060">Nakano, Koenji, Asagaya, Honancho</option>
+    <option value="Y070">Shimokitazawa, Yoyogi-uehara</option>
+    <option value="Y072">Takadanobaba</option>
+    <option value="Y073">Ikejiri-ohhashi, Sangen-jaya, Komazawa-daigaku</option>
+    <option value="Y074">Sakura-shinmachi, Yoga, Futako-tamagawa</option>
+    <option value="Y075">Yutenji, Gakugei-daigaku, Toritsu-daigaku</option>
+    <option value="Y076">Hatagaya, Sasaduka, Meidaimae, Shimo-takaido</option>
+    <option value="Y077">Chofu, Fuchu, Chitose-karasuyama, Sengawa</option>
+    <option value="Y078">Kyodo, Chitose-funabashi</option>
+    <option value="Y079">Soshigaya-Ohkura, Seijo-Gakuenmae</option>
+    <option value="Y080">Ohimachi, Nakanobu, Hatanodai, Togoshi, Magome</option>
+    <option value="Y081">Fudomae, Musashi-koyama</option>
+    <option value="Y082">Yukigaya-Otsuka, Ikegami</option>
+    <option value="Y083">Musashi-koganei</option>
   </select>
+  <div class="notice">*If you are not sure about your workplace name in Japanese(Kanji), you can search the store only by the area above.</div>
 </form>
 <div class="result">
 

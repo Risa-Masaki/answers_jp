@@ -1,3 +1,36 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.input_item {
+
+  font-size: 10px;
+  font-weight: bold;
+  color: gray;
+  margin: 10px 10px;
+}
+
+.notice {
+  font-size: 2px;
+  color: red;
+  margin: 5px 10px;
+}
+
+.result_store {
+  margin: 20px;
+  text-align: center;
+
+  .result_storeName {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .result_storeAddress {
+    font-size: 4px;
+  }
+  a {
+    text-decoration:underline;
+    text-weight: bold;
+    color: #d8836e;
+  }
+}

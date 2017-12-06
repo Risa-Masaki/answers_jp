@@ -10,34 +10,42 @@
       <h2>Details</h2>
       <div class="form-group">
         <div class="col-lg-6">
+          <div class="input_item">NAME</div>
           <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
         </div>
         <p>eg. Justin Bieber</p>
         <div class="col-lg-6">
+          <div class="input_item">EMAIL</div>
           <%= f.text_field :email, placeholder: "Email Address", class: "form-control" %>
         </div>
         <p>eg. abcdefgh@gmaol.com</p>
         <div class="col-lg-6">
+          <div class="input_item">AGE</div>
           <%= f.text_field :age, placeholder: "Age", class: "form-control" %>
         </div>
         <p>eg. 25</p>
         <div class="col-lg-6">
+          <div class="input_item">AREA - Put the closest station's name to your home</div>
           <%= f.text_field :station, placeholder: "Nearest station", class: "form-control" %>
         </div>
         <p>eg. Kanda</p>
         <div class="col-lg-6">
+          <div class="input_item">APPLY STATUS - Currently seeking job opportunity?</div>
           <%= f.select :apply, {"YES": "YES", "NO": "NO"}, {}, {class: "form-control"} %>
         </div>
-        <p>eg. YES</p>
+        <p>*If "NO", it means now you are not looking for job.</p>
         <div class="col-lg-6">
+          <div class="input_item">AVAILABILITY - When and how long you can work?</div>
           <%= f.text_field :availability, placeholder: "Availability", class: "form-control" %>
         </div>
         <p>eg. 9am-4pm on weekdays, January to March 2018 </p>
         <div class="col-lg-6">
+          <div class="input_item">INTEREST - What kind of job are you interested in?</div>
           <%= f.text_field :interest, placeholder: "Interest", class: "form-control" %>
         </div>
         <p>eg. Cooking, Travelling, Speaking Japanese</p>
         <div class="col-lg-6">
+          <div class="input_item">SELF-INTRODUCTION - What is your strengths?</div>
           <%= f.text_field :introduction, placeholder: "Introduction", class: "form-control" %>
         </div>
         <p>eg. I have been to more than 20 countries!</p>

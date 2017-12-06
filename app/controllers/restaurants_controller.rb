@@ -10,7 +10,7 @@ class RestaurantsController < ApplicationController
 
   def search
 
-    url = URI.parse(URI.escape("http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b92bb904c1086145&name=#{params[:name]}&middle_area=#{params[:area]}&count=3&format=json"))
+    url = URI.parse(URI.escape("http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b92bb904c1086145&name=#{params[:name]}&middle_area=#{params[:area]}&count=10&format=json"))
     res = Net::HTTP.start(url.host, url.port){|http|
         http.get(url.path + "?" + url.query);
     }

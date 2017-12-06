@@ -1,6 +1,5 @@
 class RecommendsController < ApplicationController
   def create
-    binding.pry
     Recommend.create(recommend_params)
     redirect_to user_path(params[:user_id])
   end
