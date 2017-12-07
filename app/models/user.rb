@@ -7,8 +7,10 @@ class User < ActiveRecord::Base
   has_many :user_restaurants
   has_many :restaurants, through: :user_restaurants
 
-  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}
-  validates_attachment_content_type :avatar, content_type: ["image/jpg","image/jpeg","image/png"]
+  mount_uploader :avatar, ImageUploader
+
+  # has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}
+  # validates_attachment_content_type :avatar, content_type: ["image/jpg","image/jpeg","image/png"]
 
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first
